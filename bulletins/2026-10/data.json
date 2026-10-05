@@ -1,10 +1,19 @@
 {
   "orgDates": [
-    { "date": "2026-10-00", "label": "Event name" }
+    { "date": "2026-10-02", "label": "CS 20 LE 1 Review Session" }
   ],
   "upDates": [],
   "birthdays": [
-    { "date": "2026-10-00", "name": "Name" }
+    { "date": "2026-10-02", "name": "Berna" },
+    { "date": "2026-10-23", "name": "Ashki" },
+    { "date": "2026-10-18", "name": "Erin" },
+    { "date": "2026-10-21", "name": "Ian" },
+    { "date": "2026-10-14", "name": "Annika" },
+    { "date": "2026-10-17", "name": "Kyros" },
+    { "date": "2026-10-28", "name": "Brent" },
+    { "date": "2026-10-27", "name": "Prince" },
+    { "date": "2026-10-16", "name": "Irvin" },
+    { "date": "2026-10-01", "name": "Thea" }
   ],
   "links": [
     { "url": "bit.ly/example" }
