@@ -1,0 +1,13 @@
+{
+  "name": "upcursor-bulletin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UP CURSOR Monthly Bulletin: a static website drawn from JSON files.",
+  "scripts": {
+    "check": "node scripts/build.js",
+    "start": "node scripts/serve.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

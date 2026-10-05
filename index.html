@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UP CURSOR Monthly Bulletin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER: same every month. Reminders always sit to its right. -->
+    <header class="top">
+      <div class="brand">
+        <div class="brand-row">
+          <img class="logo" src="assets/logo.svg" alt="" width="48" height="48">
+          <span class="org">UP CURSOR</span>
+        </div>
+        <h1 class="title">Monthly<br>Bulletin</h1>
+        <p class="month" id="month"></p>
+      </div>
+
+      <section class="reminders" id="reminders" aria-labelledby="reminders-title" hidden>
+        <h2 id="reminders-title">General Reminders</h2>
+        <ul id="reminders-list"></ul>
+      </section>
+    </header>
+
+    <p class="notice" id="notice" role="status" hidden></p>
+
+    <!-- FLEXIBLE MIDDLE: cards are drawn from data.json and re-flow automatically. -->
+    <main class="cards" id="cards" aria-live="polite"></main>
+
+    <!-- IMAGE: always at the bottom. Hidden if the month has no image.jpg. -->
+    <figure class="hero" id="hero" hidden>
+      <img id="hero-img" alt="Bulletin image">
+    </figure>
+
+    <!-- FOOTER: same every month. Edit the links here if they ever change. -->
+    <footer>
+      <ul class="socials">
+        <li><b>Facebook</b><a href="https://fb.com/UPCURSOR">fb.com/UPCURSOR</a></li>
+        <li><b>X</b><a href="https://x.com/UPCURSOR">@UPCURSOR</a></li>
+        <li><b>Instagram</b><a href="https://instagram.com/upcursor">@upcursor</a></li>
+        <li><b>Email</b><a href="mailto:execomm.upcursor@gmail.com">execomm.upcursor@gmail.com</a></li>
+      </ul>
+      <label class="switcher" id="switcher" hidden>
+        <span>Other months</span>
+        <select id="month-select"></select>
+      </label>
+    </footer>
+
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

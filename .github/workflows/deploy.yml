@@ -1,0 +1,58 @@
+name: Check and publish bulletin
+
+# Runs every time someone saves a change to the repository.
+#  - Pull requests: only checks the data files for mistakes.
+#  - Main branch:   checks, then publishes the website to GitHub Pages.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:      # lets you press "Run workflow" by hand in the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# If two saves happen close together, let the first publish finish before the next starts.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Checks every data.json and writes bulletins/index.json. Fails (red X) if it finds a mistake.
+      - name: Check bulletins
+        run: node scripts/build.js
+
+      - name: Collect website files
+        if: github.event_name != 'pull_request'
+        run: |
+          mkdir _site
+          cp -r index.html assets bulletins _site/
+
+      - name: Upload website
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
