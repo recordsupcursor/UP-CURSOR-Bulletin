@@ -1,7 +1,8 @@
 {
   "orgDates": [
     { "date": "2026-10-02", "label": "CS 20 LE 1 Review Session" },
-    { "date": "2026-10-03", "label": "CS 11 HOPE 1 Review Session" }
+    { "date": "2026-10-03", "label": "CS 11 HOPE 1 Review Session" },
+    {"date": "2026-10-12", "label": "Skills# Day 1", "note": "RSVP: https://bit.ly/SkillsSharp2627A_RSVP" }
   ],
   "upDates": [],
   "birthdays": [
@@ -21,7 +22,8 @@
     { "url": "bit.ly/CGreets2627A" },
     { "url": "bit.ly/CDOCS267A" },
     { "url": "bit.ly/CURSORAcademicLibrary" },
-    { "url": "bit.ly/CURSORFinance2627" }
+    { "url": "bit.ly/CURSORFinance2627" },
+    { "url": "https://bit.ly/SkillsSharp2627A_RSVP" }
   ],
   "reminders": [
     "Check if your September GenMeet Attendance status is correct!",
